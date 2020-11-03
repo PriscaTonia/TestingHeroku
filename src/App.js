@@ -43,7 +43,7 @@ class App extends Component{
   render(){
     return(
       <div className='myApp'>
-        <h1>TODO LIST</h1>
+        <h1>Welcome to prisca's TODO List App...</h1>
         <DisplayList list = {this.state.list} count= {this.state.count} deleteItem ={this.deleteItem} editItem = {this.editItem}/>
         <AddItem addItem ={this.addItem}  />
       </div>
