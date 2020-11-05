@@ -72,7 +72,7 @@ li{
   border-radius: 5px;
   font-size: 1.2rem;
   margin-right: 30px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
 }
 
 .myApp {
@@ -101,7 +101,7 @@ q{
 }
 @media screen and (max-width:375px){
   body{
-    background: linear-gradient(to bottom, white, white 70%, #C4C4C4 30%) ;
+    background: linear-gradient(to bottom, white, white 70%, #C4C4C4 30%, #c4c4c4 100%) ;
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
@@ -120,5 +120,6 @@ q{
   }
   li{
     margin-right: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 }
