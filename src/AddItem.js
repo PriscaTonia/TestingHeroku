@@ -23,7 +23,11 @@ class AddItem extends Component{
         return(
             <form onSubmit={this.handleSubmit} >
                 <label htmlFor='task'>Keeping a list of things to achieve in a day, gives you 98% Success!</label>
-                <input id='todo' onChange ={this.handleChange} value = {this.state.todo}/> <button>Add</button>
+                <div className='input-field'>
+                    <input id='todo' onChange ={this.handleChange} value = {this.state.todo}/> 
+                    <button>Add</button>
+                </div>
+                
             </form>
         )
     }

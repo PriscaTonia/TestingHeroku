@@ -6,7 +6,11 @@ const DisplayList = ({list, count, deleteItem, editItem}) => {
         return (
             <div key = {item.id}>
                 <ul>
-                    <li>Item {count += 1}: {item.todo}  <button onClick = {() => {deleteItem(item.id)}}> Del.</button> <button onClick={()=>{editItem(item.id)}}>Edit</button></li>
+                        <li> {item.todo} </li>  
+                        <div className='item-btn'>
+                            <button onClick = {() => {deleteItem(item.id)}}> Del.</button> 
+                            <button onClick={()=>{editItem(item.id)}}>Edit</button>
+                        </div>
                 </ul>
             </div>
         )

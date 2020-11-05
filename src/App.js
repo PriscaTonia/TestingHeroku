@@ -43,9 +43,14 @@ class App extends Component{
   render(){
     return(
       <div className='myApp'>
-        <h1>Welcome to prisca's TODO List App...</h1>
-        <DisplayList list = {this.state.list} count= {this.state.count} deleteItem ={this.deleteItem} editItem = {this.editItem}/>
+        <header>
+          <h1>My checklist</h1>
+        </header>
         <AddItem addItem ={this.addItem}  />
+        <DisplayList list = {this.state.list} count= {this.state.count} deleteItem ={this.deleteItem} editItem = {this.editItem}/>
+        <div className='quote'>
+          <q>The humblest tasks get beautified if loving hands do them...</q>
+        </div>
       </div>
     )
   }
