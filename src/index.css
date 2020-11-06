@@ -86,7 +86,7 @@ label {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  overflow-x:hidden;
+  overflow-x: hidden;
   background-color: #1d1d1d;
   min-height: 100vh;
 }
@@ -160,8 +160,18 @@ q {
     margin: 20px 0px;
   }
   .list_div p {
-    flex: 2;
+    flex: 3;
     margin-left: 10px;
     font-weight: 400;
+    word-wrap: break-word;
   }
+  .list_div .item-btn {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  /* .list_div .item-btn button{
+      width: unset;
+  } */
 }
