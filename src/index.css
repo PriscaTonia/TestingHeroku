@@ -135,6 +135,7 @@ q {
 @media screen and (max-width:500px) {
   q {
     width: 80%;
+    height: auto;
     font-size: 1.2rem;
   }
   .list_div {
