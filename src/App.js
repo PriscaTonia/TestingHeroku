@@ -19,14 +19,19 @@ class App extends Component{
     })
   }
 
-  editItem =(id)=>{
+  editItem =(id,index)=>{
     let newTodo = prompt("Edit your Todo", '')
+    newTodo = newTodo.trim();
+    if(!newTodo.length)return;
+
     let list = this.state.list
-    for(let item of list){
-      if(item.id === id){
-        item.todo = newTodo
-      }
-    }
+    list[index].todo =  newTodo
+    // for(let item of list){
+    //   if(item.id === id){
+    //     item.todo = newTodo
+    //     break;
+    //   }
+    // }
 
     this.setState({
       list: list
