@@ -1,23 +1,23 @@
 import React from 'react';
 
-const DisplayList = ({list, count, deleteItem, editItem}) => {
-    
-    const List = list.map(item =>{
+const DisplayList = ({ list, count, deleteItem, editItem }) => {
+
+    const List = list.map((item,index) => {
         return (
-            <div key = {item.id}>
-                <ul>
-                        <li> {item.todo} </li>  
-                        <div className='item-btn'>
-                            <button onClick = {() => {deleteItem(item.id)}}> Del.</button> 
-                            <button onClick={()=>{editItem(item.id)}}>Edit</button>
-                        </div>
-                </ul>
-            </div>
+            <li key={item.id}>
+                <p>{item.todo}</p>
+                <div className='item-btn'>
+                    <button onClick={() => { editItem(item.id,index) }}>Edit</button>
+                    <button id="delete" onClick={() => { deleteItem(item.id) }}> Del.</button>
+                </div>
+            </li>
         )
     })
-    return(
-        <div>
-            {List}
+    return (
+        <div className="list_div">
+            <ul>
+                {List}
+            </ul>
         </div>
     )
 }

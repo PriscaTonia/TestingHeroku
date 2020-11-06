@@ -14,6 +14,9 @@ class AddItem extends Component{
     }
     handleSubmit = (e) =>{
         e.preventDefault();
+        let newTodo = this.state.todo;
+        newTodo = newTodo.trim();
+        if (!newTodo.length) return;
         this.props.addItem(this.state);
         this.setState({
             todo: ''
@@ -22,12 +25,10 @@ class AddItem extends Component{
     render(){
         return(
             <form onSubmit={this.handleSubmit} >
-                <label htmlFor='task'>Keeping a list of things to achieve in a day, gives you 98% Success!</label>
                 <div className='input-field'>
                     <input id='todo' onChange ={this.handleChange} value = {this.state.todo}/> 
                     <button>Add</button>
                 </div>
-                
             </form>
         )
     }
